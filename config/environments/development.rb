@@ -7,7 +7,17 @@ Rails.application.configure do
   config.cache_classes = false
 
   # Do not eager load code on boot.
+  
   config.eager_load = false
+  
+  config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options = { :host => 'test-lowseng.c9users.io/'}
+  #config.action_mailer.default_url_options = { :host => 'test-lowseng.c9users.io', :protocol => 'https'}
+  
+  #config.action_mailer.default_url_options = {
+  #:host => '0.0.0.0',
+  #:port => 8080
+
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
